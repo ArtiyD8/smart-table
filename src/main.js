@@ -50,7 +50,7 @@ async function render(action) {
 const sampleTable = initTable({
     tableTemplate: 'table',
     rowTemplate: 'row',
-    before: ['header', 'filter', 'search'],
+    before: ['search', 'header', 'filter'], // search сверху, затем header, затем filter
     after: ['pagination']
 }, render);
 
