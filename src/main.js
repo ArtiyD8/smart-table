@@ -50,11 +50,10 @@ async function render(action) {
 const sampleTable = initTable({
     tableTemplate: 'table',
     rowTemplate: 'row',
-    before: ['search', 'header', 'filter'], // search сверху, затем header, затем filter
+    before: ['search', 'header', 'filter'],
     after: ['pagination']
 }, render);
 
-// Инициализация модулей
 const { applyPagination, updatePagination } = initPagination(
     sampleTable.pagination.elements,
     (el, page, isCurrent) => {
